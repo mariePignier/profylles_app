@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profylles — Formation Commerciale</title>
+  <link rel="stylesheet" href="design-system.css" />
+</head>
+<body>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo" data-page="home">
+        <span class="logo-text">Profylles</span>
+      </a>
+      <button class="navbar__burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#" class="nav-link" data-page="methode">La Méthode</a></li>
+        <li><a href="#" class="nav-link" data-page="formations">Formations</a></li>
+        <li><a href="#" class="nav-link" data-page="accompagnements">Accompagnements</a></li>
+        <li><a href="#" class="nav-link" data-page="teambuilding">Team Building</a></li>
+        <li><a href="#" class="nav-link" data-page="ressources">Ressources</a></li>
+        <li><a href="#" class="nav-link nav-link--cta btn btn--primary btn--sm" data-page="contact">Nous contacter</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======== PAGES ======== -->
+  <main id="app">
+
+    <div id="page-home" class="page"></div>
+    <div id="page-methode" class="page" hidden></div>
+    <div id="page-formations" class="page" hidden></div>
+    <div id="page-accompagnements" class="page" hidden></div>
+    <div id="page-teambuilding" class="page" hidden></div>
+    <div id="page-ressources" class="page" hidden></div>
+    <div id="page-contact" class="page" hidden></div>
+
+  </main>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo-text">Profylles</span>
+        <p class="footer__tagline">Former les commerciaux comme les pilotes s'entraînent sur simulateur.</p>
+      </div>
+      <nav class="footer__nav">
+        <ul>
+          <li><a href="#" class="nav-link" data-page="methode">La Méthode</a></li>
+          <li><a href="#" class="nav-link" data-page="formations">Formations</a></li>
+          <li><a href="#" class="nav-link" data-page="accompagnements">Accompagnements</a></li>
+          <li><a href="#" class="nav-link" data-page="teambuilding">Team Building</a></li>
+          <li><a href="#" class="nav-link" data-page="ressources">Ressources</a></li>
+          <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer__copy">
+        <p>&copy; 2026 Profylles. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
