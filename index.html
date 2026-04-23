@@ -1338,7 +1338,179 @@
 
     </div>
     <!-- /page-ressources -->
-    <div id="page-contact" class="page" hidden></div>
+    <!-- ======== PAGE CONTACT ======== -->
+    <div id="page-contact" class="page" hidden>
+
+      <!-- S1 — HERO + SPLIT réassurance / formulaire -->
+      <section class="hero hero--cream">
+        <div class="container">
+          <div class="split split--40-60">
+
+            <!-- Gauche : titre + arguments de réassurance -->
+            <div class="fade-in">
+              <div class="hero__eyebrow">
+                <span class="badge badge--primary">Contact</span>
+              </div>
+              <h1 class="display-2 text-dark hero__title">
+                Échangeons<br>
+                <em class="text-serif-italic text-gradient">sans engagement.</em>
+              </h1>
+              <p class="body-lg text-muted mt-4 mb-10">
+                Un premier échange pour comprendre vos enjeux et voir si Profylles peut vous aider — c'est tout. Pas de script, pas de pression commerciale.
+              </p>
+
+              <ul class="flex flex-col gap-6">
+                <li class="flex gap-4" style="align-items:flex-start;">
+                  <div class="card__icon" style="margin-bottom:0; flex-shrink:0; background: var(--gradient-soft);">⚡</div>
+                  <div>
+                    <h3 class="heading-4 text-dark mb-2">Réponse sous 24h</h3>
+                    <p class="body-sm text-muted">Votre message est lu par un formateur Profylles, pas par un service commercial.</p>
+                  </div>
+                </li>
+                <li class="flex gap-4" style="align-items:flex-start;">
+                  <div class="card__icon" style="margin-bottom:0; flex-shrink:0; background: var(--gradient-soft);">🤝</div>
+                  <div>
+                    <h3 class="heading-4 text-dark mb-2">Échange sans engagement</h3>
+                    <p class="body-sm text-muted">Le premier rendez-vous est un diagnostic — vous repartez avec des insights, quoi qu'il arrive.</p>
+                  </div>
+                </li>
+                <li class="flex gap-4" style="align-items:flex-start;">
+                  <div class="card__icon" style="margin-bottom:0; flex-shrink:0; background: var(--gradient-soft);">🎯</div>
+                  <div>
+                    <h3 class="heading-4 text-dark mb-2">Programme personnalisé</h3>
+                    <p class="body-sm text-muted">Aucun programme standard — chaque proposition est construite selon votre contexte, vos équipes et vos enjeux.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Droite : formulaire dans une card -->
+            <div class="card card--elevated fade-in fade-in-delay-1" style="padding: var(--space-10);">
+
+              <!-- État formulaire -->
+              <div id="contactFormWrap">
+                <h2 class="heading-2 text-dark mb-2">Parlons de vos équipes</h2>
+                <p class="body-sm text-muted mb-8">Tous les champs sont obligatoires.</p>
+
+                <form id="contactForm" class="form" novalidate>
+
+                  <div class="form__row">
+                    <div class="form__group">
+                      <label class="form__label" for="firstName">Prénom</label>
+                      <input
+                        class="form__input"
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        placeholder="Marie"
+                        autocomplete="given-name"
+                      />
+                      <span class="form__error" id="firstNameError">Veuillez saisir votre prénom.</span>
+                    </div>
+                    <div class="form__group">
+                      <label class="form__label" for="lastName">Nom</label>
+                      <input
+                        class="form__input"
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Dupont"
+                        autocomplete="family-name"
+                      />
+                      <span class="form__error" id="lastNameError">Veuillez saisir votre nom.</span>
+                    </div>
+                  </div>
+
+                  <div class="form__row">
+                    <div class="form__group">
+                      <label class="form__label" for="email">Email professionnel</label>
+                      <input
+                        class="form__input"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="marie@entreprise.com"
+                        autocomplete="email"
+                      />
+                      <span class="form__error" id="emailError">Veuillez saisir un email valide.</span>
+                    </div>
+                    <div class="form__group">
+                      <label class="form__label" for="phone">Téléphone</label>
+                      <input
+                        class="form__input"
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+33 6 00 00 00 00"
+                        autocomplete="tel"
+                      />
+                      <span class="form__error" id="phoneError">Veuillez saisir un numéro valide.</span>
+                    </div>
+                  </div>
+
+                  <div class="form__group">
+                    <label class="form__label" for="role">Niveau hiérarchique</label>
+                    <select class="form__select" id="role" name="role">
+                      <option value="">Sélectionnez votre niveau</option>
+                      <option value="dirigeant">Dirigeant / CEO / Fondateur</option>
+                      <option value="dg">Directeur Général</option>
+                      <option value="dcom">Directeur Commercial</option>
+                      <option value="manager">Manager / Responsable d'équipe</option>
+                      <option value="rh">DRH / Responsable Formation</option>
+                      <option value="autre">Autre</option>
+                    </select>
+                    <span class="form__error" id="roleError">Veuillez sélectionner votre niveau.</span>
+                  </div>
+
+                  <div class="form__row">
+                    <div class="form__group">
+                      <label class="form__label" for="department">Département / Secteur</label>
+                      <input
+                        class="form__input"
+                        type="text"
+                        id="department"
+                        name="department"
+                        placeholder="Commercial, RH, Tech…"
+                      />
+                      <span class="form__error" id="departmentError">Veuillez saisir votre département.</span>
+                    </div>
+                    <div class="form__group">
+                      <label class="form__label" for="teamSize">Nombre de commerciaux</label>
+                      <select class="form__select" id="teamSize" name="teamSize">
+                        <option value="">Sélectionnez une tranche</option>
+                        <option value="1-5">1 à 5</option>
+                        <option value="6-15">6 à 15</option>
+                        <option value="16-50">16 à 50</option>
+                        <option value="50+">Plus de 50</option>
+                      </select>
+                      <span class="form__error" id="teamSizeError">Veuillez sélectionner une tranche.</span>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn--primary btn--lg w-full mt-4">
+                    Envoyer ma demande →
+                  </button>
+
+                </form>
+              </div>
+
+              <!-- État succès -->
+              <div class="form__success" id="contactSuccess">
+                <div class="form__success__icon">✅</div>
+                <h2 class="heading-2 text-dark mb-4">Message envoyé !</h2>
+                <p class="body-lg text-muted mb-8">
+                  Merci pour votre message. Un formateur Profylles vous répondra dans les 24h pour convenir d'un premier échange.
+                </p>
+                <a href="#" class="btn btn--primary" data-page="methode">Découvrir la méthode en attendant</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <!-- /page-contact -->
 
   </main>
 
@@ -1366,5 +1538,6 @@
   </footer>
 
   <script src="main.js"></script>
+  <script src="contact.js"></script>
 </body>
 </html>
