@@ -34,66 +34,107 @@
     <!-- ======== PAGE HOME ======== -->
     <div id="page-home" class="page">
 
-      <!-- S1 — HERO -->
-      <section class="hero hero--gradient">
+      <!-- S1 — HERO asymétrique (ref image 4 : titre massif gauche + visuel droite) -->
+      <section class="hero hero--dark hero--tall">
         <div class="hero__blob hero__blob--1"></div>
         <div class="hero__blob hero__blob--2"></div>
         <div class="hero__blob hero__blob--3"></div>
-        <div class="container hero--centered">
-          <div class="hero__eyebrow fade-in">
-            <span class="badge badge--gradient">Formation Commerciale</span>
-          </div>
-          <h1 class="display-1 text-white hero__title fade-in fade-in-delay-1">
-            Entraînez vos commerciaux<br>
-            <span class="text-gradient">comme des pilotes de chasse</span>
-          </h1>
-          <p class="body-lg hero__subtitle text-white fade-in fade-in-delay-2" style="opacity:0.85;">
-            La performance commerciale ne s'apprend pas — elle se forge sous pression. Nous entraînons vos équipes à gérer leurs émotions et à performer dans les situations critiques.
-          </p>
-          <div class="hero__actions fade-in fade-in-delay-3">
-            <a href="#" class="btn btn--primary btn--lg" data-page="contact">Échanger avec un expert</a>
-            <a href="#" class="btn btn--ghost btn--lg" data-page="methode">Découvrir la méthode</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- S2 — POURQUOI LA VENTE DEVIENT PLUS DIFFICILE -->
-      <section class="section section--alt">
         <div class="container">
-          <div class="section__header fade-in">
-            <span class="badge badge--primary">Le constat</span>
-            <h2 class="heading-1 text-dark">Pourquoi la vente devient plus difficile ?</h2>
-            <p class="section__subtitle">Les acheteurs sont mieux informés, plus exigeants et plus volatils. La pression s'intensifie. Les techniques classiques ne suffisent plus.</p>
-          </div>
-          <div class="grid-3">
-            <div class="card card--bordered fade-in fade-in-delay-1">
-              <div class="card__icon">🧠</div>
-              <div class="card__tag">Comportement</div>
-              <h3 class="card__title">Les comportements dominants</h3>
-              <p class="card__body">Sous pression, chaque commercial adopte un comportement réflexe qui peut devenir son principal frein à la vente.</p>
+          <div class="split split--60-40" style="padding-block: var(--space-8);">
+            <!-- Colonne texte -->
+            <div>
+              <div class="hero__eyebrow fade-in">
+                <span class="badge badge--gradient">Formation Commerciale B2B</span>
+              </div>
+              <h1 class="display-1 text-white hero__title fade-in fade-in-delay-1">
+                Vendre,<br>
+                <em class="text-serif-italic text-gradient">vraiment.</em>
+              </h1>
+              <p class="body-lg hero__subtitle text-white fade-in fade-in-delay-2">
+                Nous entraînons vos commerciaux comme les pilotes s'entraînent sur simulateur — gestion émotionnelle sous pression, pas seulement des techniques.
+              </p>
+              <div class="hero__actions fade-in fade-in-delay-3">
+                <a href="#" class="btn btn--primary btn--lg" data-page="contact">Échanger avec un expert</a>
+                <a href="#" class="btn btn--ghost btn--lg" data-page="methode">Découvrir la méthode</a>
+              </div>
             </div>
-            <div class="card card--bordered fade-in fade-in-delay-2">
-              <div class="card__icon">⚡</div>
-              <div class="card__tag">Pression</div>
-              <h3 class="card__title">Des situations de plus en plus tendues</h3>
-              <p class="card__body">Objection sur le prix, comparaison concurrente, client exigeant : les moments critiques se multiplient et exigent une posture irréprochable.</p>
-            </div>
-            <div class="card card--bordered fade-in fade-in-delay-3">
-              <div class="card__icon">📉</div>
-              <div class="card__tag">Limites actuelles</div>
-              <h3 class="card__title">Les formations classiques ne suffisent plus</h3>
-              <p class="card__body">Elles enseignent quoi dire, pas comment réagir sous stress. Le vrai défi est émotionnel, pas technique.</p>
+            <!-- Colonne stats (ref image 3 : blocs chiffres impactants) -->
+            <div class="flex flex-col gap-6 fade-in fade-in-delay-2">
+              <div class="stat-card stat-card--primary">
+                <div class="stat-card__number">20+</div>
+                <div class="stat-card__label">Entreprises accompagnées</div>
+                <p class="stat-card__desc">Des PME aux grands groupes, dans tous les secteurs B2B.</p>
+              </div>
+              <div class="stat-card stat-card--dark">
+                <div class="stat-card__number">94%</div>
+                <div class="stat-card__label">Taux de satisfaction</div>
+                <p class="stat-card__desc">Mesuré 3 mois après la formation, en situation réelle.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- S3 — LES 3 PILIERS -->
-      <section class="section">
+      <!-- S2 — CONSTAT (asymétrique texte + 3 cards) -->
+      <section class="section section--cream">
+        <div class="container">
+          <div class="split split--40-60" style="gap: var(--space-12);">
+            <!-- Titre ancré gauche (ref image 4 : grand titre aligné gauche) -->
+            <div class="fade-in">
+              <span class="badge badge--primary mb-4">Le constat</span>
+              <h2 class="heading-1 text-dark">
+                Pourquoi la vente devient<br>
+                <em class="text-serif-italic text-gradient">plus difficile</em> ?
+              </h2>
+              <p class="body-lg text-muted mt-6">Les acheteurs sont mieux informés, plus exigeants et plus volatils. Les techniques classiques ne suffisent plus.</p>
+              <a href="#" class="btn btn--outline-dark mt-8" data-page="methode">Notre réponse →</a>
+            </div>
+            <!-- 3 mini-cards droite -->
+            <div class="flex flex-col gap-4">
+              <div class="card card--bordered card--elevated fade-in fade-in-delay-1">
+                <div class="flex gap-4" style="align-items: flex-start;">
+                  <div class="card__icon" style="margin-bottom:0; flex-shrink:0;">🧠</div>
+                  <div>
+                    <div class="card__tag">Comportement</div>
+                    <h3 class="card__title">Les comportements dominants</h3>
+                    <p class="card__body">Sous pression, chaque commercial adopte un réflexe qui peut devenir son frein principal.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card--bordered card--elevated fade-in fade-in-delay-2">
+                <div class="flex gap-4" style="align-items: flex-start;">
+                  <div class="card__icon" style="margin-bottom:0; flex-shrink:0;">⚡</div>
+                  <div>
+                    <div class="card__tag">Pression</div>
+                    <h3 class="card__title">Des situations de plus en plus tendues</h3>
+                    <p class="card__body">Objection prix, concurrent agressif, client exigeant : les moments critiques se multiplient.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card--bordered card--elevated fade-in fade-in-delay-3">
+                <div class="flex gap-4" style="align-items: flex-start;">
+                  <div class="card__icon" style="margin-bottom:0; flex-shrink:0;">📉</div>
+                  <div>
+                    <div class="card__tag">Limites actuelles</div>
+                    <h3 class="card__title">Les formations classiques ne suffisent plus</h3>
+                    <p class="card__body">Elles enseignent quoi dire, pas comment réagir sous stress. Le vrai défi est émotionnel.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- S3 — LES 3 PILIERS (centré, fond blanc) -->
+      <section class="section section--white">
         <div class="container">
           <div class="section__header fade-in">
             <span class="badge badge--primary">Notre approche</span>
-            <h2 class="heading-1 text-dark">Une nouvelle approche de la performance commerciale</h2>
+            <h2 class="heading-1 text-dark">
+              Une nouvelle approche<br>
+              <em class="text-serif-italic text-gradient">de la performance commerciale</em>
+            </h2>
             <p class="section__subtitle">Profylles combine trois disciplines pour former des commerciaux capables de performer dans n'importe quelle situation.</p>
           </div>
           <div class="grid-3">
@@ -101,7 +142,7 @@
               <div class="card__icon">🔬</div>
               <div class="card__tag">Pilier 1</div>
               <h3 class="card__title">Neurosciences</h3>
-              <p class="card__body">Comprendre comment le cerveau réagit sous stress pour anticiper ses propres réflexes et reprendre le contrôle.</p>
+              <p class="card__body">Comprendre comment le cerveau réagit sous stress pour anticiper ses réflexes et reprendre le contrôle.</p>
             </div>
             <div class="card card--gradient fade-in fade-in-delay-2">
               <div class="card__icon">❤️</div>
@@ -120,12 +161,10 @@
       </section>
 
       <!-- S4 — ILS NOUS FONT CONFIANCE -->
-      <section class="section section--alt">
+      <section class="section--sm section--cream">
         <div class="container">
-          <div class="section__header fade-in">
-            <span class="badge badge--primary">Références</span>
-            <h2 class="heading-2 text-dark">Ils nous font confiance</h2>
-            <p class="section__subtitle">Plus de 20 entreprises font confiance à Profylles pour transformer leurs équipes commerciales.</p>
+          <div class="section__header fade-in" style="margin-bottom: var(--space-10);">
+            <p class="overline text-muted">Ils nous font confiance</p>
           </div>
           <div class="logos-grid fade-in">
             <div class="logo-item">Entreprise A</div>
@@ -152,8 +191,8 @@
         </div>
       </section>
 
-      <!-- S5 — 3 OFFRES D'ACCOMPAGNEMENT -->
-      <section class="section">
+      <!-- S5 — 3 OFFRES (numérotées) -->
+      <section class="section section--white">
         <div class="container">
           <div class="section__header fade-in">
             <span class="badge badge--primary">Nos offres</span>
@@ -161,73 +200,78 @@
             <p class="section__subtitle">Trois niveaux d'intervention pour répondre à vos enjeux commerciaux.</p>
           </div>
           <div class="grid-3">
-            <div class="card card--numbered fade-in fade-in-delay-1" data-number="01">
+            <div class="card card--elevated card--numbered fade-in fade-in-delay-1" data-number="01">
               <div class="card__tag">Formation</div>
               <h3 class="card__title">Micro-learning & terrain</h3>
               <p class="card__body">Des formations courtes, intensives et directement applicables sur le terrain. Vos commerciaux s'entraînent en situation réelle.</p>
               <div class="mt-auto mt-6">
-                <a href="#" class="btn btn--secondary" data-page="formations">En savoir plus</a>
+                <a href="#" class="btn btn--secondary btn--sm" data-page="formations">En savoir plus</a>
               </div>
             </div>
-            <div class="card card--numbered fade-in fade-in-delay-2" data-number="02">
+            <div class="card card--elevated card--numbered fade-in fade-in-delay-2" data-number="02">
               <div class="card__tag">Entraînement</div>
               <h3 class="card__title">Formation sous pression</h3>
               <p class="card__body">Simulation de situations critiques pour entraîner vos équipes à gérer les objections, la concurrence et les clients exigeants.</p>
               <div class="mt-auto mt-6">
-                <a href="#" class="btn btn--secondary" data-page="formations">En savoir plus</a>
+                <a href="#" class="btn btn--secondary btn--sm" data-page="formations">En savoir plus</a>
               </div>
             </div>
-            <div class="card card--numbered fade-in fade-in-delay-3" data-number="03">
+            <div class="card card--elevated card--numbered fade-in fade-in-delay-3" data-number="03">
               <div class="card__tag">Accompagnement</div>
               <h3 class="card__title">Coaching dirigeants</h3>
               <p class="card__body">Un accompagnement sur 6 mois pour structurer votre performance commerciale : audit, positionnement, offre et posture dirigeant.</p>
               <div class="mt-auto mt-6">
-                <a href="#" class="btn btn--secondary" data-page="accompagnements">En savoir plus</a>
+                <a href="#" class="btn btn--secondary btn--sm" data-page="accompagnements">En savoir plus</a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- S6 — 4 TRANSFORMATIONS -->
+      <!-- S6 — 4 TRANSFORMATIONS (ref image 3 : blocs chiffres + texte) -->
       <section class="section section--dark">
         <div class="container">
           <div class="section__header fade-in">
             <span class="badge badge--gradient">Résultats</span>
-            <h2 class="heading-1 text-white">Les transformations que vous observerez</h2>
-            <p class="section__subtitle">Des changements concrets, mesurables, visibles dès les premières semaines d'entraînement.</p>
+            <h2 class="heading-1 text-white">
+              Les transformations<br>que vous <em class="text-serif-italic">observerez</em>
+            </h2>
+            <p class="section__subtitle">Des changements concrets, mesurables, visibles dès les premières semaines.</p>
           </div>
           <div class="grid-4">
             <div class="card card--dark fade-in fade-in-delay-1">
               <div class="card__icon">🛡️</div>
               <h3 class="card__title">Meilleure gestion des objections</h3>
-              <p class="card__body">Vos commerciaux ne subissent plus les objections — ils les anticipent et y répondent avec calme et précision.</p>
+              <p class="card__body">Vos commerciaux ne subissent plus les objections — ils les anticipent et y répondent avec calme.</p>
             </div>
             <div class="card card--dark fade-in fade-in-delay-2">
               <div class="card__icon">🚀</div>
-              <h3 class="card__title">Performer dans les situations critiques</h3>
-              <p class="card__body">Sous pression maximale, vos équipes maintiennent leur niveau de performance grâce à des automatismes bien ancrés.</p>
+              <h3 class="card__title">Performance dans les situations critiques</h3>
+              <p class="card__body">Sous pression maximale, vos équipes maintiennent leur niveau grâce à des automatismes ancrés.</p>
             </div>
             <div class="card card--dark fade-in fade-in-delay-3">
               <div class="card__icon">💡</div>
               <h3 class="card__title">Conscience de soi développée</h3>
-              <p class="card__body">Chaque commercial comprend son profil sous pression et sait ajuster sa posture en temps réel.</p>
+              <p class="card__body">Chaque commercial comprend son profil sous pression et ajuste sa posture en temps réel.</p>
             </div>
             <div class="card card--dark fade-in fade-in-delay-4">
               <div class="card__icon">📈</div>
               <h3 class="card__title">Taux de conversion en hausse</h3>
-              <p class="card__body">Des résultats commerciaux améliorés portés par une posture plus solide et un discours plus percutant.</p>
+              <p class="card__body">Des résultats améliorés portés par une posture plus solide et un discours plus percutant.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- S7 — CTA FINAL -->
-      <section class="section">
+      <section class="section section--cream">
         <div class="container">
           <div class="impact-card fade-in">
-            <h2 class="impact-card__title">Prêt à entraîner vos équipes différemment ?</h2>
-            <p class="impact-card__body">Échangez avec un expert Profylles pour identifier les besoins de vos commerciaux et construire un programme adapté.</p>
+            <h2 class="impact-card__title">
+              Prêt à entraîner vos équipes<br>
+              <em class="text-serif-italic">différemment ?</em>
+            </h2>
+            <p class="impact-card__body">Échangez avec un expert Profylles pour identifier les besoins de vos commerciaux et construire un programme sur-mesure.</p>
             <a href="#" class="btn btn--ghost btn--lg" data-page="contact">Nous contacter</a>
           </div>
         </div>
