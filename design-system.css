@@ -65,7 +65,7 @@
   --gradient-cream-purple: linear-gradient(160deg, var(--c-cream) 0%, var(--c-purple-50) 100%);
 
   /* --- Typographie --- */
-  --font-sans:    'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-sans:    'Quicksand', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-serif:   'Georgia', 'Times New Roman', serif;   /* accent italique — ref image 4 */
 
   /* Échelle (fluid clamp) */
