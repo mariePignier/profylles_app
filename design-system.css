@@ -40,6 +40,12 @@
   --c-gray-600:   #4B5563;
   --c-gray-900:   #111827;
 
+
+  --color-pink: #f192ec;
+  --color-lavender: #c9bbf7;
+  --color-light-blue: #aad6f7;
+  --color-turquoise: #93f2ea;
+
   /* --- Alias sémantiques --- */
   --color-primary:       var(--c-purple-500);
   --color-primary-dark:  var(--c-purple-600);
@@ -56,7 +62,7 @@
   --color-border:  var(--c-gray-200);
 
   /* --- Dégradés --- */
-  --gradient-hero:         linear-gradient(135deg, var(--c-pink-500) 0%, var(--c-purple-500) 50%, var(--c-cyan-500) 100%);
+  --gradient-hero:         linear-gradient(135deg, var(  --color-pink) 0%, var( --color-lavender) 50%, var( --color-turquoise) 100%);
   --gradient-card:         linear-gradient(135deg, var(--c-purple-500) 0%, var(--c-cyan-500) 100%);
   --gradient-dark:         linear-gradient(135deg, var(--c-purple-900) 0%, var(--c-purple-800) 100%);
   --gradient-pink-purple:  linear-gradient(135deg, var(--c-pink-500) 0%, var(--c-purple-500) 100%);
