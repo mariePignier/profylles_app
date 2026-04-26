@@ -254,7 +254,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* Accent sérif italique — ref "Make work *really* work" (image 4) */
 .text-serif-italic {
-  font-family: var(--font-serif);
   font-style: italic;
   font-weight: var(--fw-normal);
 }
