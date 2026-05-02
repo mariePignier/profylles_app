@@ -1,40 +1,44 @@
 /* =========================================================
-   PROFYLLES — DESIGN SYSTEM  v3
-   Colorimétrie inspirée Workleap — navy / bleu royal / corail / mauve-blanc.
-   Principes :
-     DRY  — toute valeur vit dans une variable, jamais dupliquée.
-     SOLID — chaque classe a une responsabilité unique.
-             L'extension se fait via des modificateurs (BEM --),
-             jamais en mutant la classe de base.
+   PROFYLLES — DESIGN SYSTEM  v4
+   Palette 4 couleurs :
+     #2545FF  — bleu électrique  → mots mis en valeur, liens actifs
+     #FF5822  — orange vif       → boutons importants, cards accent
+     #FAF9F6  — blanc cassé      → fonds clairs
+     #0F0A2E  — navy nuit        → fonds sombres, textes foncés
+   Dégradés : #0F0A2E → blanc, rien d'autre.
    ========================================================= */
 
 /* ---------------------------------------------------------
    1. TOKENS (source of truth)
    --------------------------------------------------------- */
 :root {
-  /* --- Palette navy (remplace purple) — ref Workleap footer/text --- */
-  --c-purple-900: #0D1B4B;   /* navy profond — textes foncés, hero dark, footer */
-  --c-purple-800: #162060;
-  --c-purple-700: #1E2D7D;
-  --c-purple-600: #2B3D9A;
-  --c-purple-500: #3D5AFE;   /* bleu royal — CTA, liens actifs */
-  --c-purple-400: #6B82FF;
-  --c-purple-300: #9AABFF;
-  --c-purple-100: #E8ECFF;
-  --c-purple-50:  #EEF0FF;   /* fond hero lavande — ref Workleap hero */
+  /* --- 4 couleurs signature --- */
+  --c-blue:    #2545FF;   /* bleu électrique — mise en valeur texte */
+  --c-orange:  #FF5822;   /* orange vif — boutons CTA, cards accent */
+  --c-offwhite:#FAF9F6;   /* blanc cassé — fonds clairs */
+  --c-navy:    #0F0A2E;   /* navy nuit — fonds sombres, textes */
 
-  /* --- Corail / orange (remplace pink) — ref Workleap accent underline --- */
-  --c-pink-500:   #E8522A;   /* corail chaud — accent, soulignements */
-  --c-pink-400:   #F07048;
-  --c-pink-100:   #FDEEE9;
+  /* --- Déclinaisons utilitaires (DRY — dérivées des 4 couleurs) --- */
+  --c-purple-900: var(--c-navy);
+  --c-purple-800: #1A1245;
+  --c-purple-700: #241A5E;
+  --c-purple-600: #2E2277;
+  --c-purple-500: var(--c-blue);
+  --c-purple-400: #5570FF;
+  --c-purple-300: #8599FF;
+  --c-purple-100: #D6DCFF;
+  --c-purple-50:  #EEF0FF;
 
-  /* --- Mauve (remplace cyan) — pour les dégradés texte mauve→blanc cassé --- */
-  --c-cyan-500:   #9B59B6;   /* mauve — dégradé texte */
-  --c-cyan-400:   #B07FCC;
-  --c-cyan-100:   #F0E8F8;
+  --c-pink-500:   var(--c-orange);
+  --c-pink-400:   #FF7A4D;
+  --c-pink-100:   #FFEEE8;
 
-  --c-cream:      #F0EEE9;   /* crème chaude — ref Workleap sections */
-  --c-cream-dark: #E8E5DE;
+  --c-cyan-500:   var(--c-blue);   /* unifié — plus de 3e couleur */
+  --c-cyan-400:   var(--c-purple-400);
+  --c-cyan-100:   var(--c-purple-100);
+
+  --c-cream:      var(--c-offwhite);
+  --c-cream-dark: #F0EDE8;
   --c-white:      #FFFFFF;
   --c-gray-50:    #F9FAFB;
   --c-gray-100:   #F3F4F6;
@@ -43,36 +47,29 @@
   --c-gray-600:   #4B5563;
   --c-gray-900:   #111827;
 
-  /* --- Alias sémantiques (inchangés — le reste du CSS ne bouge pas) --- */
-  --color-primary:       var(--c-purple-500);   /* bleu royal */
+  /* --- Alias sémantiques --- */
+  --color-primary:       var(--c-blue);
   --color-primary-dark:  var(--c-purple-600);
   --color-primary-light: var(--c-purple-400);
-  --color-accent-pink:   var(--c-pink-500);     /* corail */
-  --color-accent-cyan:   var(--c-cyan-500);     /* mauve */
+  --color-accent-pink:   var(--c-orange);
+  --color-accent-cyan:   var(--c-blue);
 
-  --color-bg:      var(--c-cream);
+  --color-bg:      var(--c-offwhite);
   --color-bg-alt:  var(--c-cream-dark);
   --color-white:   var(--c-white);
-  --color-dark:    var(--c-purple-900);         /* navy profond */
+  --color-dark:    var(--c-navy);
   --color-text:    var(--c-gray-900);
   --color-muted:   var(--c-gray-600);
   --color-border:  var(--c-gray-200);
 
-  /* --- Dégradés (noms inchangés — DRY respecté) --- */
-  /* Texte héro : mauve profond → blanc cassé lavande (ta demande) */
-  --gradient-hero:         linear-gradient(135deg, var(--c-purple-500) 0%, var(--c-cyan-500) 50%, #EDE8FF 100%);
-  /* Cards : bleu royal → mauve */
-  --gradient-card:         linear-gradient(135deg, var(--c-purple-500) 0%, var(--c-cyan-500) 100%);
-  /* Fond hero dark : navy → navy légèrement plus clair */
-  --gradient-dark:         linear-gradient(135deg, var(--c-purple-900) 0%, var(--c-purple-800) 100%);
-  /* Boutons CTA : bleu royal → mauve */
-  --gradient-pink-purple:  linear-gradient(135deg, var(--c-purple-500) 0%, var(--c-cyan-500) 100%);
-  /* Dégradé texte secondaire : mauve → blanc cassé */
-  --gradient-purple-cyan:  linear-gradient(135deg, var(--c-cyan-500) 0%, #EDE8FF 100%);
-  /* Fond soft : lavande très claire — ref Workleap hero bg */
-  --gradient-soft:         linear-gradient(135deg, rgba(61,90,254,.06) 0%, rgba(155,89,182,.06) 100%);
-  /* Hero cream : lavande → blanc cassé — ref Workleap hero */
-  --gradient-cream-purple: linear-gradient(160deg, var(--c-purple-50) 0%, var(--c-cream) 100%);
+  /* --- Dégradés — #0F0A2E → blanc, c'est tout --- */
+  --gradient-hero:         linear-gradient(135deg, var(--c-navy) 0%, #FFFFFF 100%);
+  --gradient-card:         linear-gradient(135deg, var(--c-navy) 0%, #3A3270 100%);
+  --gradient-dark:         linear-gradient(135deg, var(--c-navy) 0%, var(--c-purple-800) 100%);
+  --gradient-pink-purple:  linear-gradient(135deg, var(--c-orange) 0%, var(--c-navy) 100%);
+  --gradient-purple-cyan:  linear-gradient(135deg, var(--c-navy) 0%, #FFFFFF 100%);
+  --gradient-soft:         linear-gradient(135deg, rgba(37,69,255,.05) 0%, rgba(15,10,46,.04) 100%);
+  --gradient-cream-purple: linear-gradient(160deg, var(--c-offwhite) 0%, var(--c-purple-50) 100%);
 
   /* --- Typographie --- */
   --font-sans:    'Quicksand', 'Segoe UI', system-ui, -apple-system, sans-serif;
