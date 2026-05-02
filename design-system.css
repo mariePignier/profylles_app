@@ -41,7 +41,7 @@
   --c-gray-400:   #9CA3AF;
   --c-gray-600:   #4B5563;
   --c-gray-900:   #111827;
-
+  --c-blue:          #5570FF;
 
   --color-pink: #f192ec;
   --color-lavender: #c9bbf7;
@@ -443,8 +443,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* Fonds colorés */
 .card--gradient {
-  background: var(--gradient-card);
+  /* background: var(--gradient-card); */
   color: var(--color-dark);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #0F0A2E;
+  border-radius: 30;
 }
 .card--dark {
   background: var(--c-purple-800);
@@ -516,6 +520,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   text-transform: uppercase;
   color: var(--color-primary);
   margin-bottom: var(--space-2);
+  margin-top:var(--space-2) ;
 }
 .card--gradient .card__tag,
 .card--dark     .card__tag { color: rgba(255,255,255,.65); }
@@ -527,14 +532,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   line-height: var(--leading-snug);
   margin-bottom: var(--space-3);
 }
-.card--gradient .card__title,
-.card--dark     .card__title { color: var(--c-purple-900); }
+.card--gradient .card__title { color: var(--c-purple-900); }
+.card--dark     .card__title { color: var(--c-orange); }
 
 .card__body {
   font-size: var(--text-base);
   line-height: var(--leading-normal);
 }
-.card--gradient,
 .card--dark      { color: rgba(255,255,255,.75); }
 
 
@@ -813,7 +817,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border-radius: var(--radius-2xl);
   padding: var(--space-10) var(--space-8);
 }
-.stat-card--primary { background: var(--color-primary); color: var(--c-white); }
+.stat-card--primary { background: var(--c-blue); color: var(--c-white); }
 .stat-card--dark    { background: var(--c-purple-900);  color: var(--c-white); }
 .stat-card__number  {
   font-size: clamp(2.5rem, 7vw, var(--text-8xl));
