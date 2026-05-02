@@ -47,6 +47,12 @@
   --c-gray-600:   #4B5563;
   --c-gray-900:   #111827;
 
+
+  --color-pink: #f192ec;
+  --color-lavender: #c9bbf7;
+  --color-light-blue: #aad6f7;
+  --color-turquoise: #93f2ea;
+
   /* --- Alias sémantiques --- */
   --color-primary:       var(--c-blue);
   --color-primary-dark:  var(--c-purple-600);
