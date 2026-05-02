@@ -69,11 +69,12 @@
   --color-border:  var(--c-gray-200);
 
   /* --- Dégradés — bleu primaire → blanc --- */
-  --gradient-hero:         linear-gradient(135deg, var(--c-blue) 0%, #FFFFFF 100%);
+  /* hero : style Workleap — blanc pur → bleu primaire très doux (12 %) en haut à droite */
+  --gradient-hero:         linear-gradient(135deg, #FFFFFF 30%, rgba(37,69,255,.12) 100%);
   --gradient-card:         linear-gradient(135deg, var(--c-blue) 0%, #5570FF 100%);
   --gradient-dark:         linear-gradient(135deg, var(--c-navy) 0%, var(--c-purple-800) 100%);
   --gradient-pink-purple:  linear-gradient(135deg, var(--c-orange) 0%, var(--c-blue) 100%);
-  --gradient-purple-cyan:  linear-gradient(135deg, var(--c-blue) 0%, #FFFFFF 100%);
+  --gradient-purple-cyan:  linear-gradient(135deg, #FFFFFF 30%, rgba(37,69,255,.12) 100%);
   --gradient-soft:         linear-gradient(135deg, rgba(37,69,255,.05) 0%, rgba(37,69,255,.02) 100%);
   --gradient-cream-purple: linear-gradient(160deg, var(--c-offwhite) 0%, var(--c-purple-50) 100%);
 
