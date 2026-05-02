@@ -1,37 +1,44 @@
 /* =========================================================
-   PROFYLLES — DESIGN SYSTEM  v2
-   Principes :
-     DRY  — toute valeur vit dans une variable, jamais dupliquée.
-     SOLID — chaque classe a une responsabilité unique.
-             L'extension se fait via des modificateurs (BEM --),
-             jamais en mutant la classe de base.
+   PROFYLLES — DESIGN SYSTEM  v4
+   Palette 4 couleurs :
+     #2545FF  — bleu électrique  → mots mis en valeur, liens actifs
+     #FF5822  — orange vif       → boutons importants, cards accent
+     #FAF9F6  — blanc cassé      → fonds clairs
+     #0F0A2E  — navy nuit        → fonds sombres, textes foncés
+   Dégradés : #0F0A2E → blanc, rien d'autre.
    ========================================================= */
 
 /* ---------------------------------------------------------
    1. TOKENS (source of truth)
    --------------------------------------------------------- */
 :root {
-  /* --- Palette principale --- */
-  --c-purple-900: #0F0A2E;   /* navy profond — textes foncés, hero dark */
-  --c-purple-800: #1E1352;
-  --c-purple-700: #2D1B69;
-  --c-purple-600: #553098;
-  --c-purple-500: #6B46C1;   /* violet signature */
-  --c-purple-400: #9F7AEA;
-  --c-purple-300: #C4B5FD;
-  --c-purple-100: #EDE9FE;
-  --c-purple-50:  #F5F3FF;
+  /* --- 4 couleurs signature --- */
+  --c-blue:    #2545FF;   /* bleu électrique — mise en valeur texte */
+  --c-orange:  #FF5822;   /* orange vif — boutons CTA, cards accent */
+  --c-offwhite:#FAF9F6;   /* blanc cassé — fonds clairs */
+  --c-navy:    #0F0A2E;   /* navy nuit — fonds sombres, textes */
 
-  --c-pink-500:   #EC4899;
-  --c-pink-400:   #F472B6;
-  --c-pink-100:   #FCE7F3;
+  /* --- Déclinaisons utilitaires (DRY — dérivées des 4 couleurs) --- */
+  --c-purple-900: var(--c-navy);
+  --c-purple-800: #1A1245;
+  --c-purple-700: #241A5E;
+  --c-purple-600: #2E2277;
+  --c-purple-500: var(--c-blue);
+  --c-purple-400: #5570FF;
+  --c-purple-300: #8599FF;
+  --c-purple-100: #D6DCFF;
+  --c-purple-50:  #EEF0FF;
 
-  --c-cyan-500:   #06B6D4;
-  --c-cyan-400:   #22D3EE;
-  --c-cyan-100:   #CFFAFE;
+  --c-pink-500:   var(--c-orange);
+  --c-pink-400:   #FF7A4D;
+  --c-pink-100:   #FFEEE8;
 
-  --c-cream:      #FAF9F6;   /* fond crème — ref image 3/4 */
-  --c-cream-dark: #F2F0EB;
+  --c-cyan-500:   var(--c-blue);   /* unifié — plus de 3e couleur */
+  --c-cyan-400:   var(--c-purple-400);
+  --c-cyan-100:   var(--c-purple-100);
+
+  --c-cream:      var(--c-offwhite);
+  --c-cream-dark: #F0EDE8;
   --c-white:      #FFFFFF;
   --c-gray-50:    #F9FAFB;
   --c-gray-100:   #F3F4F6;
@@ -47,28 +54,28 @@
   --color-turquoise: #93f2ea;
 
   /* --- Alias sémantiques --- */
-  --color-primary:       var(--c-purple-500);
+  --color-primary:       var(--c-blue);
   --color-primary-dark:  var(--c-purple-600);
   --color-primary-light: var(--c-purple-400);
-  --color-accent-pink:   var(--c-pink-500);
-  --color-accent-cyan:   var(--c-cyan-500);
+  --color-accent-pink:   var(--c-orange);
+  --color-accent-cyan:   var(--c-blue);
 
-  --color-bg:      var(--c-cream);
+  --color-bg:      var(--c-offwhite);
   --color-bg-alt:  var(--c-cream-dark);
   --color-white:   var(--c-white);
-  --color-dark:    var(--c-purple-900);
+  --color-dark:    var(--c-navy);
   --color-text:    var(--c-gray-900);
   --color-muted:   var(--c-gray-600);
   --color-border:  var(--c-gray-200);
 
-  /* --- Dégradés --- */
-  --gradient-hero:         linear-gradient(135deg, var(  --color-pink) 0%, var( --color-lavender) 50%, var( --color-turquoise) 100%);
-  --gradient-card:         linear-gradient(135deg, var(--c-purple-500) 0%, var(--c-cyan-500) 100%);
-  --gradient-dark:         linear-gradient(135deg, var(--c-purple-900) 0%, var(--c-purple-800) 100%);
-  --gradient-pink-purple:  linear-gradient(135deg, var(--c-pink-500) 0%, var(--c-purple-500) 100%);
-  --gradient-purple-cyan:  linear-gradient(135deg, var(--c-purple-500) 0%, var(--c-cyan-500) 100%);
-  --gradient-soft:         linear-gradient(135deg, rgba(107,70,193,.07) 0%, rgba(6,182,212,.07) 100%);
-  --gradient-cream-purple: linear-gradient(160deg, var(--c-cream) 0%, var(--c-purple-50) 100%);
+  /* --- Dégradés — #0F0A2E → blanc, c'est tout --- */
+  --gradient-hero:         linear-gradient(135deg, var(--c-navy) 0%, #FFFFFF 100%);
+  --gradient-card:         linear-gradient(135deg, var(--c-navy) 0%, #3A3270 100%);
+  --gradient-dark:         linear-gradient(135deg, var(--c-navy) 0%, var(--c-purple-800) 100%);
+  --gradient-pink-purple:  linear-gradient(135deg, var(--c-orange) 0%, var(--c-navy) 100%);
+  --gradient-purple-cyan:  linear-gradient(135deg, var(--c-navy) 0%, #FFFFFF 100%);
+  --gradient-soft:         linear-gradient(135deg, rgba(37,69,255,.05) 0%, rgba(15,10,46,.04) 100%);
+  --gradient-cream-purple: linear-gradient(160deg, var(--c-offwhite) 0%, var(--c-purple-50) 100%);
 
   /* --- Typographie --- */
   --font-sans:    'Quicksand', 'Segoe UI', system-ui, -apple-system, sans-serif;
