@@ -24,6 +24,8 @@
   --c-purple-100: #EDE9FE;
   --c-purple-50:  #F5F3FF;
 
+  --c-offwhite: #FAF9F6;
+
   /* --c-pink-500:   #EC4899;
   --c-pink-400:   #F472B6;
   --c-pink-100:   #FCE7F3;
@@ -31,7 +33,7 @@
   --c-cyan-500:   #06B6D4;
   --c-cyan-400:   #22D3EE;
   --c-cyan-100:   #CFFAFE; */
-
+  --c-orange: #FF5822;
   --c-cream:      #FAF9F6;   /* fond crème — ref image 3/4 */
   --c-cream-dark: #F2F0EB;
   --c-white:      #FFFFFF;
@@ -265,6 +267,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .text-serif-italic {
   font-style: italic;
   font-weight: var(--fw-normal);
+  color: var(--c-orange);
 }
 
 /* Dégradé texte */
@@ -372,8 +375,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   letter-spacing: .06em;
   text-transform: uppercase;
 }
-.badge--primary  { background: var(--c-purple-100); color: var(--c-purple-600); }
-.badge--gradient { background: var(--gradient-hero); color: var(--c-white); }
+.badge--primary  { background: var(--c-blue); color: var(--c-white);  }
+.badge--gradient { background: var(--c-blue); color: var(--c-white); }
 .badge--light    { background: var(--c-gray-100);    color: var(--color-muted); }
 .badge--dark     { background: var(--c-purple-900);  color: var(--c-white); }
 .badge--outline  { background: transparent; border: 1.5px solid currentColor; color: var(--color-primary); }
@@ -446,13 +449,14 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   /* background: var(--gradient-card); */
   color: var(--color-dark);
   border-style: solid;
-  border-width: 1px;
-  border-color: #0F0A2E;
+  border-width: 0.5px;
+  border-color: var(--c-gray-400);
+  /* opacity: 50%; */
   border-radius: 30;
 }
 .card--dark {
-  background: var(--c-purple-800);
-  color: var(--c-purple-900);
+  background: var(--c-cream);
+  color: var(--c-gray-900);
 }
 .card--soft {
   background: var(--gradient-soft);
@@ -533,13 +537,12 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   margin-bottom: var(--space-3);
 }
 .card--gradient .card__title { color: var(--c-purple-900); }
-.card--dark     .card__title { color: var(--c-orange); }
 
 .card__body {
   font-size: var(--text-base);
   line-height: var(--leading-normal);
 }
-.card--dark      { color: rgba(255,255,255,.75); }
+/* .card--dark      { color: rgba(255,255,255,.75); } */
 
 
 /* ---------------------------------------------------------
@@ -550,7 +553,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border-radius: var(--radius-2xl);
   padding: var(--space-8);
   box-shadow: var(--shadow-md);
-  border-top: 4px solid var(--color-primary);
+  border-top: 4px solid var(--c-orange);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 .profil-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
@@ -601,7 +604,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   left: calc(var(--space-8) + 26px);
   right: calc(var(--space-8) + 26px);
   height: 2px;
-  background: var(--gradient-card);
+  background: var(--c-blue);
   z-index: 0;
 }
 .step {
@@ -645,9 +648,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* color: var(--c-white); } */
 /*  color: var(--c-white); */
 /* .hero--dark     { background: var(--gradient-dark)};  
-.hero--gradient { background: var(--gradient-hero);  }
+.hero--gradient { background: var(--gradient-hero);  } */
 .hero--cream    { background: var(--gradient-cream-purple); }
-.hero--white    { background: var(--c-white); } */
+.hero--white    { background: var(--c-white); } 
 
 /* Disposition du contenu */
 .hero--centered { text-align: center; }
@@ -729,7 +732,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border-radius: var(--radius-2xl) 0 0 var(--radius-2xl);
 }
 .compare__col--after {
-  background: var(--gradient-card);
+  background: var(--c-blue);
   color: var(--c-white);
   border-radius: 0 var(--radius-2xl) var(--radius-2xl) 0;
 }
@@ -761,6 +764,16 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border-radius: var(--radius-3xl);
   padding: var(--space-20) var(--space-12);
   color: var(--c-white);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.impact-card__dark {
+  background: var(--gradient-hero);
+  border-radius: var(--radius-3xl);
+  padding: var(--space-20) var(--space-12);
+  color: var(--color-dark);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -825,7 +838,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   letter-spacing: -0.03em;
   line-height: var(--leading-none);
   margin-bottom: var(--space-3);
-  color: var(--c-white);
+  /* color: var(--c-white); */
 }
 .stat-card__label   { font-size: var(--text-lg); font-weight: var(--fw-semibold); opacity: .80; margin-bottom: var(--space-4); }
 .stat-card__desc    { font-size: var(--text-sm); opacity: .65; line-height: var(--leading-normal); }
@@ -934,8 +947,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* ---------------------------------------------------------
    19. LISTE CHECKMARK
    --------------------------------------------------------- */
-.check-list { display: flex; flex-direction: column; gap: var(--space-4); }
-.check-list li {
+.check-list, .check-list__orange { display: flex; flex-direction: column; gap: var(--space-4); }
+.check-list li, .check-list__orange li {
   display: flex;
   align-items: flex-start;
   gap: var(--space-3);
@@ -947,7 +960,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   width: 24px;
   height: 24px;
   border-radius: var(--radius-full);
-  background: var(--gradient-hero);
+  background: var(--c-blue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -956,6 +969,22 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   font-weight: var(--fw-bold);
   margin-top: 1px;
 }
+
+.check-list__orange .check-icon__orange {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background: var(--c-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-white);
+  font-size: .75rem;
+  font-weight: var(--fw-bold);
+  margin-top: 1px;
+}
+
 
 /* ---------------------------------------------------------
    20. DIVIDERS
@@ -1099,11 +1128,13 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .overflow-hidden { overflow: hidden; }
 .hidden   { display: none !important; }
 
+
 /* Marges */
 .mb-2  { margin-bottom: var(--space-2); }
 .mb-3  { margin-bottom: var(--space-3); }
 .mb-4  { margin-bottom: var(--space-4); }
-.mb-6  { margin-bottom: var(--space-6); }
+.mb-6  { margin-bottom: var(--space-6);}
+.mb-6__orange { margin-bottom: var(--space-6); background-color: var(--c-orange);}
 .mb-8  { margin-bottom: var(--space-8); }
 .mb-12 { margin-bottom: var(--space-12); }
 .mt-4  { margin-top: var(--space-4); }
