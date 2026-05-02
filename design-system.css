@@ -1,10 +1,11 @@
 /* =========================================================
-   PROFYLLES — DESIGN SYSTEM  v2
-   Principes :
-     DRY  — toute valeur vit dans une variable, jamais dupliquée.
-     SOLID — chaque classe a une responsabilité unique.
-             L'extension se fait via des modificateurs (BEM --),
-             jamais en mutant la classe de base.
+   PROFYLLES — DESIGN SYSTEM  v4
+   Palette 4 couleurs :
+     #2545FF  — bleu électrique  → mots mis en valeur, liens actifs
+     #FF5822  — orange vif       → boutons importants, cards accent
+     #FAF9F6  — blanc cassé      → fonds clairs
+     #0F0A2E  — navy nuit        → fonds sombres, textes foncés
+   Dégradés : #0F0A2E → blanc, rien d'autre.
    ========================================================= */
 
 /* ---------------------------------------------------------
@@ -48,16 +49,16 @@
   --color-turquoise: #93f2ea;
 
   /* --- Alias sémantiques --- */
-  --color-primary:       var(--c-purple-500);
+  --color-primary:       var(--c-blue);
   --color-primary-dark:  var(--c-purple-600);
   --color-primary-light: var(--c-purple-400);
-  --color-accent-pink:   var(--c-pink-500);
-  --color-accent-cyan:   var(--c-cyan-500);
+  --color-accent-pink:   var(--c-orange);
+  --color-accent-cyan:   var(--c-blue);
 
-  --color-bg:      var(--c-cream);
+  --color-bg:      var(--c-offwhite);
   --color-bg-alt:  var(--c-cream-dark);
   --color-white:   var(--c-white);
-  --color-dark:    var(--c-purple-900);
+  --color-dark:    var(--c-navy);
   --color-text:    var(--c-gray-900);
   --color-muted:   var(--c-gray-600);
   --color-border:  var(--c-gray-200);
