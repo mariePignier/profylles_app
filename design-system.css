@@ -68,13 +68,13 @@
   --color-muted:   var(--c-gray-600);
   --color-border:  var(--c-gray-200);
 
-  /* --- Dégradés — #0F0A2E → blanc, c'est tout --- */
-  --gradient-hero:         linear-gradient(135deg, var(--c-navy) 0%, #FFFFFF 100%);
-  --gradient-card:         linear-gradient(135deg, var(--c-navy) 0%, #3A3270 100%);
+  /* --- Dégradés — bleu primaire → blanc --- */
+  --gradient-hero:         linear-gradient(135deg, var(--c-blue) 0%, #FFFFFF 100%);
+  --gradient-card:         linear-gradient(135deg, var(--c-blue) 0%, #5570FF 100%);
   --gradient-dark:         linear-gradient(135deg, var(--c-navy) 0%, var(--c-purple-800) 100%);
-  --gradient-pink-purple:  linear-gradient(135deg, var(--c-orange) 0%, var(--c-navy) 100%);
-  --gradient-purple-cyan:  linear-gradient(135deg, var(--c-navy) 0%, #FFFFFF 100%);
-  --gradient-soft:         linear-gradient(135deg, rgba(37,69,255,.05) 0%, rgba(15,10,46,.04) 100%);
+  --gradient-pink-purple:  linear-gradient(135deg, var(--c-orange) 0%, var(--c-blue) 100%);
+  --gradient-purple-cyan:  linear-gradient(135deg, var(--c-blue) 0%, #FFFFFF 100%);
+  --gradient-soft:         linear-gradient(135deg, rgba(37,69,255,.05) 0%, rgba(37,69,255,.02) 100%);
   --gradient-cream-purple: linear-gradient(160deg, var(--c-offwhite) 0%, var(--c-purple-50) 100%);
 
   /* --- Typographie --- */
