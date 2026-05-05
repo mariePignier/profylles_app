@@ -617,7 +617,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   width: 52px;
   height: 52px;
   border-radius: var(--radius-full);
-  background: var(--gradient-hero);
+  background: var(--c-blue);
   color: var(--c-white);
   font-size: var(--text-lg);
   font-weight: var(--fw-bold);
@@ -1217,8 +1217,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .footer__nav ul { align-items: flex-start; }
   .footer__copy { text-align: left; }
 
-  /* Hero mobile */
-    .hero {
+  /* Hero mobile — réduit l'espace sous le header */
+  .hero {
     padding-top: calc(var(--navbar-h) + var(--space-8));
     padding-bottom: var(--space-12);
   }
@@ -1233,5 +1233,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .hero__actions { flex-direction: column; align-items: stretch; }
   .hero__actions .btn { text-align: center; justify-content: center; }
 
+  /* Très petits écrans — espace encore plus compact */
   .hero { padding-top: calc(var(--navbar-h) + var(--space-6)); padding-bottom: var(--space-10); }
 }
