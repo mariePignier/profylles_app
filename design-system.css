@@ -626,7 +626,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   justify-content: center;
   margin-inline: auto;
   margin-bottom: var(--space-4);
-  box-shadow: 0 4px 16px rgba(107,70,193,.35);
+  box-shadow: 0 4px 16px rgba(37,69,255,.25);
 }
 .step__title { font-size: var(--text-lg); font-weight: var(--fw-bold);   color: var(--color-dark); margin-bottom: var(--space-2); }
 .step__desc  { font-size: var(--text-sm); color: var(--color-muted); }
@@ -1218,7 +1218,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .footer__copy { text-align: left; }
 
   /* Hero mobile */
-  .hero { padding-bottom: var(--space-16); }
+    .hero {
+    padding-top: calc(var(--navbar-h) + var(--space-8));
+    padding-bottom: var(--space-12);
+  }
   .hero--full, .hero--tall { min-height: auto; }
   .hero__blob { display: none; }
   .impact-card { padding: var(--space-12) var(--space-6); }
@@ -1229,4 +1232,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   .btn--lg     { padding: var(--space-4) var(--space-8); font-size: var(--text-base); }
   .hero__actions { flex-direction: column; align-items: stretch; }
   .hero__actions .btn { text-align: center; justify-content: center; }
+
+  .hero { padding-top: calc(var(--navbar-h) + var(--space-6)); padding-bottom: var(--space-10); }
 }
