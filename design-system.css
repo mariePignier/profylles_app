@@ -689,31 +689,54 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .hero__blob--3 { width: 320px; height: 320px; background: var(--color-accent-pink);  top: 30%; right: 18%; }
 
 /* ---------------------------------------------------------
-   13. LOGOS GRID
+   13. LOGOS GRID — bande "ils nous font confiance"
    --------------------------------------------------------- */
 .logos-grid {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: var(--space-6);
+  gap: var(--space-10);
 }
+
+/* Conteneur de chaque logo */
 .logo-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 44px;
-  background: var(--c-white);
-  border-radius: var(--radius-md);
-  border: 1.5px solid var(--color-border);
-  font-size: var(--text-sm);
-  font-weight: var(--fw-bold);
-  color: var(--color-muted);
-  padding: var(--space-2) var(--space-3);
-  transition: box-shadow var(--transition-base), border-color var(--transition-base);
+  padding: var(--space-3) var(--space-4);
+  transition: opacity var(--transition-base), transform var(--transition-base);
 }
-.logo-item:hover { box-shadow: var(--shadow-sm); border-color: var(--c-purple-300); }
+
+/* Image du logo — grayscale par défaut, couleur au survol */
+.logo-item img {
+  display: block;
+  max-width: 140px;
+  max-height: 52px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(.55);
+  transition: filter var(--transition-base), transform var(--transition-base);
+}
+
+.logo-item:hover img {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.05);
+}
+
+/* Variante logo clair sur fond sombre (ex : Atmos Gear) */
+.logo-item--invert img {
+  filter: grayscale(100%) invert(1) opacity(.55);
+}
+.logo-item--invert:hover img {
+  filter: grayscale(0%) invert(0) opacity(1);
+}
+
+@media (max-width: 768px) {
+  .logos-grid { gap: var(--space-8); }
+  .logo-item img { max-width: 100px; max-height: 40px; }
+}
 
 /* ---------------------------------------------------------
    14. BEFORE / AFTER COMPARISON
