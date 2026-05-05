@@ -1084,7 +1084,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .navbar__burger span {
   display: block;
   height: 2px;
-  background: var(--color-dark);
+  background: var(--c-blue);
   border-radius: 2px;
   transition: transform var(--transition-base), opacity var(--transition-base);
 }
