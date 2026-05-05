@@ -605,7 +605,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   right: calc(var(--space-8) + 26px);
   height: 2px;
   background: var(--c-blue);
-  opacity: .18;
   z-index: 0;
 }
 .step {
