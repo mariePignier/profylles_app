@@ -66,7 +66,7 @@
   --color-border:  var(--c-gray-200);
 
   /* --- Dégradés --- */
-  /* --gradient-hero:         linear-gradient(135deg, var(  --color-pink) 0%, var( --color-lavender) 50%, var( --color-turquoise) 100%); */
+  /*   --c-king-blue:         linear-gradient(135deg, var(  --color-pink) 0%, var( --color-lavender) 50%, var( --color-turquoise) 100%); */
   --c-king-blue:         #2545FF; 
   /* --gradient-card:         linear-gradient(135deg, var(--c-purple-500) 0%, var(--c-cyan-500) 100%); */
   /* --gradient-dark:         linear-gradient(135deg, var(--c-purple-900) 0%, var(--c-purple-800) 100%); */
@@ -413,7 +413,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .section--cream    { background: var(--color-bg); }          /* crème — ref image 3 */
 .section--alt      { background: var(--color-bg-alt); }
 .section--dark     { background: var(--color-dark);      color: var(--c-white); }
-.section--gradient { background: var(--gradient-hero);   color: var(--c-white); }
+.section--gradient { background: var(  --c-king-blue);   color: var(--c-white); }
 .section--soft     { background: var(--gradient-soft); }
 .section--navy     { background: var(--c-purple-800);    color: var(--c-white); }
 
@@ -502,7 +502,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   font-size: var(--text-4xl);
   font-weight: var(--fw-black);
   line-height: 1;
-  background: var(--gradient-hero);
+  background: var(  --c-king-blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -666,7 +666,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* color: var(--c-white); } */
 /*  color: var(--c-white); */
 /* .hero--dark     { background: var(--gradient-dark)};  
-.hero--gradient { background: var(--gradient-hero);  } */
+.hero--gradient { background: var(  --c-king-blue);  } */
 .hero--cream    { background: var(--gradient-cream-purple); }
 .hero--white    { background: var(--c-white); } 
 
@@ -801,7 +801,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
    15. IMPACT CARD (pleine largeur, dégradé)
    --------------------------------------------------------- */
 .impact-card {
-  background: var(--gradient-hero);
+  background: var(  --c-king-blue);
   border-radius: var(--radius-3xl);
   padding: var(--space-20) var(--space-12);
   color: var(--c-white);
@@ -811,7 +811,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 .impact-card__dark {
-  background: var(--gradient-hero);
+  background: var(  --c-king-blue);
   border-radius: var(--radius-3xl);
   padding: var(--space-20) var(--space-12);
   color: var(--color-dark);
@@ -853,7 +853,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   letter-spacing: -0.03em;
   line-height: var(--leading-none);
   margin-bottom: var(--space-3);
-  background: var(--gradient-hero);
+  background: var(  --c-king-blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1031,7 +1031,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
    20. DIVIDERS
    --------------------------------------------------------- */
 .divider          { height: 1px; background: var(--color-border); border: none; margin-block: var(--space-8); }
-.divider--gradient{ height: 2px; background: var(--gradient-hero); border: none; }
+.divider--gradient{ height: 2px; background: var(  --c-king-blue); border: none; }
 
 /* ---------------------------------------------------------
    21. ANIMATIONS SCROLL (Intersection Observer via main.js)
@@ -1079,7 +1079,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   font-size: var(--text-xl);
   font-weight: var(--fw-black);
   letter-spacing: -0.02em;
-  background: var(--gradient-hero);
+  background: var(  --c-king-blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1103,7 +1103,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   position: absolute;
   bottom: -4px; left: 0; right: 0;
   height: 2px;
-  background: var(--gradient-hero);
+  background: var(  --c-king-blue);
   border-radius: 1px;
   transform: scaleX(0);
   transition: transform var(--transition-base);
