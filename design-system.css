@@ -66,8 +66,8 @@
   --color-border:  var(--c-gray-200);
 
   /* --- Dégradés --- */
-  /* --gradient-hero:         linear-gradient(135deg, var(  --color-pink) 0%, var( --color-lavender) 50%, var( --color-turquoise) 100%); */
-  --gradient-hero:         #2545FF; 
+  /*   --c-king-blue:         linear-gradient(135deg, var(  --color-pink) 0%, var( --color-lavender) 50%, var( --color-turquoise) 100%); */
+  --c-king-blue:         #2545FF; 
   /* --gradient-card:         linear-gradient(135deg, var(--c-purple-500) 0%, var(--c-cyan-500) 100%); */
   /* --gradient-dark:         linear-gradient(135deg, var(--c-purple-900) 0%, var(--c-purple-800) 100%); */
   /* --gradient-pink-purple:  linear-gradient(135deg, var(--c-pink-500) 0%, var(--c-purple-500) 100%); */
@@ -197,7 +197,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: center;
 }
 .split--60-40 { grid-template-columns: 3fr 2fr; }
-.split--40-60 { grid-template-columns: 2fr 3fr; }
+.split--40-60 { grid-template-columns: 2fr 3fr; margin-bottom: 50px; }
 
 /* Flex utilitaires */
 .flex         { display: flex; }
@@ -262,21 +262,15 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .text-primary { color: var(--color-primary); }
 .text-muted   { color: var(--color-muted); }
 .text-dark    { color: var(--color-dark); }
+.text-orange  { color: var(--c-orange);}
+.text-king-blue { color: var(--c-king-blue);}
 
 /* Accent sérif italique — ref "Make work *really* work" (image 4) */
 .text-serif-italic {
   font-style: italic;
   font-weight: var(--fw-normal);
-  color: var(--c-orange);
 }
 
-/* Dégradé texte */
-.text-gradient {
-  background: var(--gradient-hero);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
 .text-gradient--purple-cyan {
   background: var(--gradient-purple-cyan);
   -webkit-background-clip: text;
@@ -319,6 +313,29 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .btn:hover  { transform: translateY(-2px); }
 .btn:active { transform: translateY(0); }
 
+.btn_dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  font-size: var(--text-base);
+  font-weight: var(--fw-semibold);
+  line-height: 1;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-base),
+    border-color var(--transition-base);
+  cursor: pointer;
+}
+
+
+
+
 /* Couleurs (un modificateur = une responsabilité couleur) */
 .btn--primary {
   background: var(--gradient-pink-purple);
@@ -343,10 +360,11 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .btn--ghost:hover { background: rgba(255,255,255,.22); }
 
 .btn--dark {
-  background: var(--color-dark);
+  background: var(--c-purple-800);
   color: var(--c-white);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.btn--dark:hover { background: var(--c-purple-800); }
+.btn--dark:hover { transform: translateY(-6px); }
 
 .btn--outline-dark {
   background: transparent;
@@ -395,7 +413,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .section--cream    { background: var(--color-bg); }          /* crème — ref image 3 */
 .section--alt      { background: var(--color-bg-alt); }
 .section--dark     { background: var(--color-dark);      color: var(--c-white); }
-.section--gradient { background: var(--gradient-hero);   color: var(--c-white); }
+.section--gradient { background: var(  --c-king-blue);   color: var(--c-white); }
 .section--soft     { background: var(--gradient-soft); }
 .section--navy     { background: var(--c-purple-800);    color: var(--c-white); }
 
@@ -484,7 +502,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   font-size: var(--text-4xl);
   font-weight: var(--fw-black);
   line-height: 1;
-  background: var(--gradient-hero);
+  background: var(  --c-king-blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -648,7 +666,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* color: var(--c-white); } */
 /*  color: var(--c-white); */
 /* .hero--dark     { background: var(--gradient-dark)};  
-.hero--gradient { background: var(--gradient-hero);  } */
+.hero--gradient { background: var(  --c-king-blue);  } */
 .hero--cream    { background: var(--gradient-cream-purple); }
 .hero--white    { background: var(--c-white); } 
 
@@ -783,7 +801,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
    15. IMPACT CARD (pleine largeur, dégradé)
    --------------------------------------------------------- */
 .impact-card {
-  background: var(--gradient-hero);
+  background: var(  --c-king-blue);
   border-radius: var(--radius-3xl);
   padding: var(--space-20) var(--space-12);
   color: var(--c-white);
@@ -793,7 +811,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 }
 
 .impact-card__dark {
-  background: var(--gradient-hero);
+  background: var(  --c-king-blue);
   border-radius: var(--radius-3xl);
   padding: var(--space-20) var(--space-12);
   color: var(--color-dark);
@@ -835,14 +853,14 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   letter-spacing: -0.03em;
   line-height: var(--leading-none);
   margin-bottom: var(--space-3);
-  background: var(--gradient-hero);
+  background: var(  --c-king-blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .stat-block__label {
-  font-size: var(--text-base);
-  color: var(--color-muted);
+  font-size: var(--text-lg);
+  color: var(--c-blue);
   font-weight: var(--fw-medium);
 }
 .section--dark .stat-block__label,
@@ -1013,7 +1031,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
    20. DIVIDERS
    --------------------------------------------------------- */
 .divider          { height: 1px; background: var(--color-border); border: none; margin-block: var(--space-8); }
-.divider--gradient{ height: 2px; background: var(--gradient-hero); border: none; }
+.divider--gradient{ height: 2px; background: var(  --c-king-blue); border: none; }
 
 /* ---------------------------------------------------------
    21. ANIMATIONS SCROLL (Intersection Observer via main.js)
@@ -1061,7 +1079,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   font-size: var(--text-xl);
   font-weight: var(--fw-black);
   letter-spacing: -0.02em;
-  background: var(--gradient-hero);
+  background: var(  --c-king-blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1085,7 +1103,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   position: absolute;
   bottom: -4px; left: 0; right: 0;
   height: 2px;
-  background: var(--gradient-hero);
+  background: var(  --c-king-blue);
   border-radius: 1px;
   transform: scaleX(0);
   transition: transform var(--transition-base);
@@ -1296,7 +1314,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* 2. Bioéthique / biais cognitifs / état mental sous pression
       fa-solid fa-head-side-virus  */
-.icon-bioethics  { background: linear-gradient(135deg, #F97316 0%, #EF4444 100%); }
+.icon-bioethics, .icon-atom  { background: linear-gradient(135deg, #F97316 0%, #EF4444 100%); }
 
 /* 3. Apprentissage / analyse documentaire
       fa-solid fa-book-open  */
@@ -1340,7 +1358,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* 13. Mindset / état d'esprit / mécanique mentale
        fa-solid fa-head-side-cog  */
-.icon-mindset    { background: linear-gradient(135deg, #FBBF24 0%, #EF4444 100%); }
+.icon-mindset, .icon-glass-chart, .icon-fire   { background: linear-gradient(135deg, #FBBF24 0%, #EF4444 100%); }
 
 /* 14. Levier / mécanique de vente / effort → résultat
        fa-solid fa-dumbbell  */
@@ -1356,4 +1374,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* 17. Interaction digitale / interface tactile / AR
        fa-solid fa-hand-pointer  */
-.icon-interact   { background: linear-gradient(135deg, #7C3AED 0%, #D97706 100%); }
+.icon-interact, .icon-handshake  { background: linear-gradient(135deg, #7C3AED 0%, #D97706 100%); }
+
+.icon-glass-dollar {background-color: #0F0A2E;}
+
+.icon-game { background-color: #2545FF;}
