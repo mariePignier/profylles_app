@@ -1321,3 +1321,23 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* 8. Indicateur en baisse / signal d'alerte
       fa-solid fa-arrow-trend-down  */
 .icon-decrease   { background: linear-gradient(135deg, #FCD34D 0%, #F59E0B 100%); }
+
+/* 9. Énergie / impact / activation commerciale
+      fa-solid fa-bolt  */
+.icon-energy     { background: linear-gradient(135deg, #22D3EE 0%, #A855F7 100%); }
+
+/* 10. Mise en situation / simulation présentiel
+       fa-solid fa-person-chalkboard  */
+.icon-simulation { background: linear-gradient(135deg, #22D3EE 0%, #7C3AED 100%); }
+
+/* 11. Idée / insight / révélation pédagogique
+       fa-solid fa-lightbulb  */
+.icon-idea       { background: linear-gradient(135deg, #FBBF24 0%, #F97316 100%); }
+
+/* 12. Tableau de bord / pilotage de la performance
+       fa-solid fa-gauge-high  */
+.icon-dashboard  { background: linear-gradient(135deg, #22D3EE 0%, #6366F1 100%); }
+
+/* 13. Mindset / état d'esprit / mécanique mentale
+       fa-solid fa-head-side-cog  */
+.icon-mindset    { background: linear-gradient(135deg, #FBBF24 0%, #EF4444 100%); }
