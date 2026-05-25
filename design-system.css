@@ -1258,3 +1258,66 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
   .hero { padding-top: calc(var(--navbar-h) + var(--space-6)); padding-bottom: var(--space-10); }
 }
+
+/* ---------------------------------------------------------
+   27. ICON BADGES — Font Awesome + dégradés Profylles
+   SRP : chaque classe applique uniquement le dégradé de fond.
+   Usage : <span class="icon-badge icon-argument"><i class="fa-solid fa-comments"></i></span>
+   --------------------------------------------------------- */
+
+/* Conteneur générique */
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-xl);
+  color: var(--c-white);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,.15);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.icon-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.2);
+}
+
+/* Tailles modificateurs (OCP — extension sans toucher à la base) */
+.icon-badge--sm { width: 40px; height: 40px; font-size: 1rem;  border-radius: var(--radius-lg); }
+.icon-badge--lg { width: 72px; height: 72px; font-size: 1.8rem; border-radius: var(--radius-2xl); }
+
+/* --- 8 icônes thématiques Profylles --- */
+
+/* 1. Argumentation / échanges commerciaux
+      fa-solid fa-comments  */
+.icon-argument   { background: linear-gradient(135deg, #7C3AED 0%, #06B6D4 100%); }
+
+/* 2. Bioéthique / biais cognitifs / état mental sous pression
+      fa-solid fa-head-side-virus  */
+.icon-bioethics  { background: linear-gradient(135deg, #F97316 0%, #EF4444 100%); }
+
+/* 3. Apprentissage / analyse documentaire
+      fa-solid fa-book-open  */
+.icon-book       { background: linear-gradient(135deg, #FBBF24 0%, #F97316 100%); }
+
+/* 4. Neurosciences / cerveau
+      fa-solid fa-brain  */
+.icon-brain      { background: linear-gradient(135deg, #F0ABFC 0%, #7C3AED 100%); }
+
+/* 5. Intelligence émotionnelle / cerveau bienveillant
+      fa-solid fa-face-smile  */
+.icon-emotional  { background: linear-gradient(135deg, #3B82F6 0%, #06B6D4 100%); }
+
+/* 6. Évaluation / bilan collaborateur
+      fa-solid fa-user-check  */
+.icon-check-user { background: linear-gradient(135deg, #F97316 0%, #EF4444 100%); }
+
+/* 7. Performance / pilotage commercial
+      fa-solid fa-chart-line  */
+.icon-performance{ background: linear-gradient(135deg, #3B82F6 0%, #06B6D4 100%); }
+
+/* 8. Indicateur en baisse / signal d'alerte
+      fa-solid fa-arrow-trend-down  */
+.icon-decrease   { background: linear-gradient(135deg, #FCD34D 0%, #F59E0B 100%); }
