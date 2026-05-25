@@ -1341,3 +1341,19 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 /* 13. Mindset / état d'esprit / mécanique mentale
        fa-solid fa-head-side-cog  */
 .icon-mindset    { background: linear-gradient(135deg, #FBBF24 0%, #EF4444 100%); }
+
+/* 14. Levier / mécanique de vente / effort → résultat
+       fa-solid fa-dumbbell  */
+.icon-leverage   { background: linear-gradient(135deg, #F43F5E 0%, #F97316 100%); }
+
+/* 15. ROI / conversion / flux financier
+       fa-solid fa-arrows-rotate + fa-dollar-sign → fa-money-bill-trend-up  */
+.icon-roi        { background: linear-gradient(135deg, #F87171 0%, #4ADE80 100%); }
+
+/* 16. Planning / agenda / cadence commerciale
+       fa-solid fa-calendar-days  */
+.icon-planning   { background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%); }
+
+/* 17. Interaction digitale / interface tactile / AR
+       fa-solid fa-hand-pointer  */
+.icon-interact   { background: linear-gradient(135deg, #7C3AED 0%, #D97706 100%); }
