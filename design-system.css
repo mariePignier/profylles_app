@@ -276,6 +276,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  padding-right: 5px;
 }
 .text-gradient--purple-cyan {
   background: var(--gradient-purple-cyan);
@@ -841,8 +842,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   background-clip: text;
 }
 .stat-block__label {
-  font-size: var(--text-base);
-  color: var(--color-muted);
+  font-size: var(--text-lg);
+  color: var(--c-blue);
   font-weight: var(--fw-medium);
 }
 .section--dark .stat-block__label,
@@ -1296,7 +1297,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* 2. Bioéthique / biais cognitifs / état mental sous pression
       fa-solid fa-head-side-virus  */
-.icon-bioethics  { background: linear-gradient(135deg, #F97316 0%, #EF4444 100%); }
+.icon-bioethics, .icon-atom  { background: linear-gradient(135deg, #F97316 0%, #EF4444 100%); }
 
 /* 3. Apprentissage / analyse documentaire
       fa-solid fa-book-open  */
@@ -1340,7 +1341,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* 13. Mindset / état d'esprit / mécanique mentale
        fa-solid fa-head-side-cog  */
-.icon-mindset    { background: linear-gradient(135deg, #FBBF24 0%, #EF4444 100%); }
+.icon-mindset, .icon-glass-chart, .icon-fire   { background: linear-gradient(135deg, #FBBF24 0%, #EF4444 100%); }
 
 /* 14. Levier / mécanique de vente / effort → résultat
        fa-solid fa-dumbbell  */
@@ -1356,4 +1357,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 /* 17. Interaction digitale / interface tactile / AR
        fa-solid fa-hand-pointer  */
-.icon-interact   { background: linear-gradient(135deg, #7C3AED 0%, #D97706 100%); }
+.icon-interact, .icon-handshake  { background: linear-gradient(135deg, #7C3AED 0%, #D97706 100%); }
+
+.icon-glass-dollar {background-color: #0F0A2E;}
+
+.icon-game { background-color: #2545FF;}
