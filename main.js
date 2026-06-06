@@ -7,7 +7,7 @@
 // ---------------------------------------------------------
 // 1. ROUTING
 // ---------------------------------------------------------
-const PAGES = ['home', 'methode', 'formations', 'accompagnements', 'teambuilding', 'ressources', 'contact'];
+const PAGES = ['home', 'methode', 'formations', 'accompagnements', 'teambuilding', 'ressources', 'contact', 'marie'];
 
 function showPage(pageId) {
   if (!PAGES.includes(pageId)) pageId = 'home';
